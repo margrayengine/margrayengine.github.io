@@ -30,6 +30,7 @@ function openSideNav() {
     document.body.style.background = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/image.jpg')"
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundAttachment = "fixed";
 }
 
 
@@ -39,7 +40,8 @@ function closeSideNav() {
     document.getElementById("heading").style.marginLeft = "0";
     document.body.style.background = "url('/image.jpg')";
     document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";    
+    document.body.style.backgroundSize = "cover";  
+    document.body.style.backgroundAttachment = "fixed";  
 }
 
 window.onload = function() {
