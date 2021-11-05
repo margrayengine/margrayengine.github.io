@@ -11,8 +11,8 @@ function openHome() {
     window.location.assign("home.html")
 }
 
-function openAbout() {
-    window.location.assign("about.html")
+function openCredits() {
+    window.location.assign("credits.html")
 }
 
 function openDocs() {

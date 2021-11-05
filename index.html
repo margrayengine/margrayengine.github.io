@@ -4,14 +4,23 @@
     <link rel="stylesheet" href="./style.css"/>
     <link rel="icon" href="icon.ico">
     <link rel="stylesheet" href="font.css">
-    
+    <link rel="stylesheet" href="index.css">
     <title>Margray</title>
     <script type="text/javascript" src="main.js"></script>
   </head>
-  <body>
-    <h1 class="heading">Welcome to </h1>
-    <h1 id="heading" class="heading" style="font-size:100px">Margray Game Engine</h1>
+  <body style="overflow: hidden">
+  <svg class="center" style="width:450%">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#7b4397;stop-opacity:1" />
+        <stop offset="300%" style="stop-color:#dc2430;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="11%" cy="75" rx="7%" ry="75" fill="url(#grad1)"/>
+    <text fill="#ffffff" font-size="70" font-family="Verdana" x="5.4%" y="95">Margray Game Engine</text>
+  </svg>
     <h1 id="anim" class="heading" style="font-size:35px;color:#a200ff;">Margray is an easy-to-learn Python library for creating 2D video games</h1>
     <button id="button" onclick="openHome()">Get Started</button>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

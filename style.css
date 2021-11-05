@@ -129,6 +129,7 @@ li {
 
 #downloadbtn-installer:hover {
     background-color: #ff00ff;
+    background-color: #a200ff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -364,7 +365,7 @@ li {
     border:6px solid #d400ff
 }
 
-.python {
+.python,.powershell {
     width: 50%;
     margin: auto;
     padding: 5px;

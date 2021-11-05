@@ -1,0 +1,13 @@
+
+
+#margray{
+    animation: macolor 3s infinite;
+}
+
+#game{
+    animation: gacolor 2s infinite;
+}
+
+#engine{
+    animation: encolor 2s infinite;
+}
