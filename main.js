@@ -27,13 +27,16 @@ function openSideNav() {
     document.getElementById("mySidenav").style.width = "320px";
     document.getElementById("main").style.marginLeft = "320px";
     document.getElementById("heading").style.marginLeft = "320px";
+    document.getElementById("anim").style.marginLeft = "320px";
+    document.getElementById("head").style.marginLeft = "320px";
 }
-
 
 function closeSideNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("heading").style.marginLeft = "0";
+    document.getElementById("anim").style.marginLeft = "0";
+    document.getElementById("head").style.marginLeft = "0";
 }
 
 window.onload = function() {
