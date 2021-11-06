@@ -3,6 +3,7 @@
   <head> 
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="./font.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link rel="icon" href="icon.ico">
         <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -14,7 +15,8 @@
   <body>
   <div style="display: inline">
       <span style="font-size:30px;cursor:pointer;margin-left:10px;" onclick="openSideNav()">&#9776; Menu</span>
-      <div id="head"><h1 class="heading" id="heading" style="font-size:85px">Margray Game Engine</h1></div>
+      <div id="head">    <h1 class="heading animateText">Margray Game Engine</h1>
+    <img id="icon" src="icon.png" alt="image loading" class="rotate"></div>
   </div>
     <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
@@ -30,7 +32,7 @@
         </div>
     </div>    
  
-    <div id="main">
+    <div id="main" >
       <h2 id="heading" class="heading" style="font-family:Arial, Helvetica, sans-serif">Getting Started</h2>
       <h3 class="home-sub-head">Download Margray</h3>
       <button id="hm-dw-btn" onclick="openDownloads()" style="width:250px">Go to Downloads</button>

@@ -10,9 +10,11 @@
   @keyframes animateText {
     from {
       transform: translateY(0px);
+      color: black
     }
     to {
       transform: translateY(30px);
+      color: rgb(63, 63, 63)
     }
   }  
 
