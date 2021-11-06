@@ -36,6 +36,7 @@
             <a href="#window">Creating a window</a>
             <a href="#sprite">Creating a sprite</a>
             <a href="#animated-sprite">Creating a animated sprite</a>
+            <a href="#wwk">Working with keys</a>
         </div>
         </div>
      <div id="main">
@@ -97,7 +98,7 @@ while True:
     margray.update()        
     </code>
     </pre>
-    <div id="animated-sprite"><h2 class="subheading" style="text-align:center;">Working with Keys</h2></div>
+    <div id="wwk"><h2 class="subheading" style="text-align:center;">Working with Keys</h2></div>
         <pre>
         <code class="python">
 from margray_2d import *
@@ -105,13 +106,25 @@ from margray_2d import *
 margray = Margray()
 margray.create_screen()
 
+keyTime = Time()
+
 while True:
     margray.fps().setMaxFPS(NORMAL_FPS)
     events = EventHandler(margray.run())
     events.enableAutoQuit(margray)
+    keyW = events.isKey(Keys.KEY_W)
     #Detecting if the key is pressed and not held
-    if events.isKey(Keys.KEY_W).pressed():
+    if keyW.pressed():
         print("Key 'W' is pressed")
+    #Detecting if the key is released
+    if keyW.released():
+        print("Key 'W' is released") 
+    #Detecting if the key is pressed and held       
+    if keyW.held():
+        print("Key 'W' is held") 
+    #Detecting if the key is held for 1 second    
+    if keyW.held_for(keyTime,1000):
+        print("Key 'W' is held for 1 second")        
     margray.update()        
     </code>
     </pre>
