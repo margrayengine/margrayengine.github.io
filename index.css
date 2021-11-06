@@ -1,4 +1,20 @@
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 
+  @keyframes animateText {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(30px);
+    }
+  }  
 
 #margray{
     animation: macolor 3s infinite;
@@ -10,4 +26,18 @@
 
 #engine{
     animation: encolor 2s infinite;
+}
+
+.rotate {
+    animation: rotation 2s infinite none alternate;
+    width: 15%;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+    transition: 1s;
+  }
+.animateText{
+    animation: animateText 2s infinite none alternate;
 }
