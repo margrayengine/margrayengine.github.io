@@ -77,32 +77,6 @@ function scrollExampleDown() {
     window.location.href = "example.html#down"
 }
 
-function toggleContent() {
-    var button = document.getElementById("contents-button");
-    var contents = document.getElementById("contents");
-    buttonText = button.value
-    if (buttonText == "Show Contents") {
-        button.value = "Hide Contents"
-        contents.style.display = "block"
-    } else {
-        button.value = "Show Contents"
-        contents.style.display = "none"
-    }
-}
-
-function togglePages() {
-    var button = document.getElementById("pages-button");
-    var contents = document.getElementById("pages");
-    buttonText = button.value
-    if (buttonText == "Show Pages") {
-        button.value = "Hide Pages"
-        contents.style.display = "block"
-    } else {
-        button.value = "Show Pages"
-        contents.style.display = "none"
-    }
-}
-
 function download(filename, file_path) {
 
     var element = document.createElement('a');

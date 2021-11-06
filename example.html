@@ -65,7 +65,7 @@ while True:
     </pre>
         <br/>
         <div id="sprite"><h2 class="subheading" style="text-align:center;">Creating a sprite</h2></div>
-        <pre readonly>
+        <pre>
         <code class="python">
 from margray_2d import *
 
@@ -81,7 +81,7 @@ while True:
     </code>
     </pre>
         <div id="animated-sprite"><h2 class="subheading" style="text-align:center;">Creating an animated sprite</h2></div>
-        <pre readonly>
+        <pre>
         <code class="python">
 from margray_2d import *
 
@@ -97,8 +97,24 @@ while True:
     margray.update()        
     </code>
     </pre>
+    <div id="animated-sprite"><h2 class="subheading" style="text-align:center;">Working with Keys</h2></div>
+        <pre>
+        <code class="python">
+from margray_2d import *
 
+margray = Margray()
+margray.create_screen()
 
+while True:
+    margray.fps().setMaxFPS(NORMAL_FPS)
+    events = EventHandler(margray.run())
+    events.enableAutoQuit(margray)
+    #Detecting if the key is pressed and not held
+    if events.isKey(Keys.KEY_W).pressed():
+        print("Key 'W' is pressed")
+    margray.update()        
+    </code>
+    </pre>
     <div id="down"></div>
     </div>
   </body>

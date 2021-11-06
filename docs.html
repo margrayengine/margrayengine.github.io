@@ -42,6 +42,7 @@
         <a href="#at">Animated text</a>
         <a href="#img">Image</a>
         <a href="#event">The Event Handler</a>
+        <a href="#time">The "Time" class</a>
         <a href="#keys">The "Keys" class</a>
         <a href="#oc">Other Constants</a>
         <br/>
@@ -1137,6 +1138,7 @@
       </li>
       <div id="event">
         <h2 class="subheading">The EventHandler</h2>
+        <p class="description">The EventHandler() class is used the handle the events happening in the screen</p>
         <li><code class="code">EventHandler</code></li>
       </div>
       <br />
@@ -1192,7 +1194,7 @@
       </li>
       <li class="subsubli">
         <code class="subcode">pressed()</code>
-        <p class="description">Returns if the key is pressed</p>
+        <p class="description">Returns if the key is pressed (Doesn't detect if the key is held)</p>
       </li>
 
       <li class="subsubli">
@@ -1200,12 +1202,32 @@
         <p class="description">Returns if the key is released</p>
       </li>
       <li class="subsubli">
-        <code class="subcode">holded()</code>
-        <p class="description">Returns if the key is holded</p>
+        <code class="subcode">held()</code>
+        <p class="description">Returns if the key is held</p>
       </li>
+
+      <li class="subsubli">
+        <code class="subcode">held_for(timeClass,milliseconds)</code>
+        <p class="description">Returns if the key is held for given milliseconds the first parameter should be the <a href="#time" style="color:black">Time()</a> class</p>
+      </li>      
+
+      <div id="time">
+        <h2 class="subheading">The "Time" class</h2>
+         <p class="description">The Time() class is used to do functions based on time <strong>NOTE: </strong>Don't create reference for Time() class in a while loop!</div>
+        <li><code class="code">Time</code></li>
+       
+      
+      <li class="subli">
+        <code class="code">cooldownFinished(seconds)</code>
+        <p class="description">Returns if the given duration has been completed</p>
+      </li>      
+      
+      
       <div id="keys">
         <h2 class="subheading">The "Keys" class</h2>
+        <p class="description">The Keys() class contains a list of keys</p>
         <li><code class="code">Keys</code></li>
+
       </div> 
       <br/>     
       <li class="subli">
