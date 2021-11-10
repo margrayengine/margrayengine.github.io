@@ -10,11 +10,11 @@
   @keyframes animateText {
     from {
       transform: translateY(0px);
-      color: black
+      color: rgb(0, 0, 0)
     }
     to {
       transform: translateY(30px);
-      color: rgb(63, 63, 63)
+      color: rgb(75, 75, 75)
     }
   }  
 
@@ -38,7 +38,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 8%;
-    transition: 1s;
   }
 .animateText{
     animation: animateText 2s infinite none alternate;
