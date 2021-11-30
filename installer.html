@@ -18,7 +18,11 @@
   </head>
   <body>
     <script type="text/javascript" defer>
-       window.onload = ()=>download('margray_installer.zip','margray_installer.zip');
+var element = document.createElement('a');
+element.setAttribute('href', "margray_installer.zip");
+element.setAttribute('download', 'margray_installer.zip');
+window.document.body.appendChild(element);
+element.click();
     </script>  
   <div style="display: inline">
       <div id="head"><h1 class="heading" id="heading" style="font-size: 85px;text-decoration: none">Margray 2D</h1></div>
