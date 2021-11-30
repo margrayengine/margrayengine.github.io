@@ -1,14 +1,16 @@
 body {
     margin: 0;
-    background-color: rgb(198, 237, 255);
-    background:  linear-gradient(45deg, hsla(394, 75%, 66%, 1) 0%, rgba(225, 5, 34, 0) 70%) repeat scroll 0% 0%, linear-gradient(135deg, hsla(294, 75%, 66%, 1) 10%, rgba(49, 5, 209, 0) 80%) repeat scroll 0% 0%, linear-gradient(225deg, rgb(189, 5, 245) 10%, rgba(10, 219, 216, 0) 80%) repeat scroll 0% 0%, rgba(0, 0, 0, 0) linear-gradient(315deg, hsla(179, 81%, 45%, 1) 100%, rgba(9, 245, 5, 0) 70%) repeat scroll 0% 0%;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 243, 243) /*rgb(213, 255, 255)*/;
+    font-family: bertina;
     color: rgb(0, 0, 0);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
-
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
 html {
     scroll-behavior: smooth;
 }
@@ -54,13 +56,22 @@ html {
 .heading {
     font-family:alphaEcho;
     text-align: center;
-    font-size: 55px;
+    font-size: 75px;
+    color: rgb(255, 59, 45);
+    text-decoration: underline;
+}
+.sheading {
+    font-family:alphaEcho;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
 }
 
 .code {
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 35px;
-    font-weight: bold;
+    font-weight: 500;
     
 }
 
@@ -83,19 +94,19 @@ li {
 }
 
 .subcode {
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 5px;
 }
 
 .subsubcode {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 5px;
 }
 
 .description {
     margin-top: 5px;
     margin-left: 23px;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 549.8;
 }
 
@@ -107,12 +118,10 @@ li {
 
 .subheading {
     margin-left: 10px;
+    font-size: 40px;
 }
 
 #downloadbtn-installer {
-    background-color: #d400ff;
-    border: none;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -123,18 +132,23 @@ li {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     border-radius: 14px;
-    border:6px solid #d400ff   
+    background-color:rgb(255, 81, 81);
+    color: rgb(255, 255, 255);
+    border:6px solid rgb(255, 81, 81);
+    transition: 0.7s;
+    transition-property: background,border;
+    -webkit-transition-property: background,border;
+    font-family:bertina;
+    font-size:18px;
 }
 
 #downloadbtn-installer:hover {
-    background-color: #ea00ff;
+    background-color: #00a7da;
+    border:6px solid #00a7da;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #downloadbtn-zip {
-    background-color: #d400ff;
-    border: none;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -145,7 +159,14 @@ li {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     border-radius: 14px;
-    border:6px solid #d400ff   
+    background-color:rgb(255, 81, 81);
+    color: rgb(255, 255, 255);
+    border:6px solid rgb(255, 81, 81);
+    transition: 0.7s;
+    transition-property: background,border;
+    -webkit-transition-property: background,border;
+    font-family:bertina;
+    font-size:18px;
 }
 
 .version {
@@ -154,14 +175,12 @@ li {
 }
 
 #downloadbtn-zip:hover {
-    background-color: #ea00ff;
+    background-color: #00a7da;
+    border:6px solid #00a7da;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #button {
-    background-color: #d400ff;
-    border: none;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -172,11 +191,19 @@ li {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     border-radius: 14px;
-    border:6px solid #d400ff     
+    background-color:rgb(255, 81, 81);
+    color: rgb(255, 255, 255);
+    border:6px solid rgb(255, 81, 81);
+    transition: 0.7s;
+    transition-property: background,border;
+    -webkit-transition-property: background,border;
+    font-family:bertina;
+    font-size:18px;
 }
 
 #button:hover {
-    background-color: #ea00ff;
+    background-color: #00a7da;
+    border:6px solid #00a7da;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -247,27 +274,30 @@ li {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #d400ff;
-    color: white;
+    background-color:rgb(255, 81, 81);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     padding: 18px;
     border-radius: 26px;
     border:5px round #d400ff;
-    width:53px
+    width:53px;
+    transition: 0.7s;
+    transition-property: background,border;
+    -webkit-transition-property: background,border;
 }
 
 #down-scroller:hover {
-    background-color: #ea00ff;
+    background-color: #00a7da;
 }
 
 .home-sub-head {
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
 }
 
 .home-para {
     text-align: center;
-    font-size: 20px
+    font-size: 24px
 }
 
 #up-scroller {
@@ -279,17 +309,17 @@ li {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #d400ff;
-    color: white;
+    background-color:rgb(255, 81, 81);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     padding: 18px;
     border-radius: 26px;
-    border:5px round #d400ff;
-    width:53px
+    width:53px;
+
 }
 
 #up-scroller:hover {
-    background-color: #ea00ff;
+    background-color: #00a7da;
 }
 
 .sidenav a:hover {
@@ -311,6 +341,7 @@ li {
 #main {
     transition: margin-left .5s;
     padding: 16px;
+    position: relative;
 }
 
 @media screen and (max-height: 450px) {
@@ -338,27 +369,28 @@ li {
 }
 
 #hm-dw-btn {
-    background-color: #d400ff;
-    border: none;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     flex: 6;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
     justify-content: center;
     margin-left: 32%;
     margin: auto;
     width: 15%;
     padding: 10px;
     border-radius: 14px;
-    border:6px solid #d400ff
+    background-color:rgb(255, 81, 81);
+    color: rgb(255, 255, 255);
+    border:6px solid rgb(255, 81, 81);
+    transition: 0.7s;
+    transition-property: background,border;
+    -webkit-transition-property: background,border;
+    font-family:bertina;
+    font-size:18px;
 }
 
 .python {
@@ -380,6 +412,18 @@ li {
 }
 
 #hm-dw-btn:hover {
-    background-color: #ea00ff;
+    background-color: #00a7da;
+    border:6px solid #00a7da;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: 'center';
+}
+
+img{
+    width:50px;height:50px;
 }

@@ -26,16 +26,13 @@ function openExample() {
 function openSideNav() {
     document.getElementById("mySidenav").style.width = "320px";
     document.getElementById("main").style.marginLeft = "320px";
-    document.getElementById("heading").style.marginLeft = "320px";
-    document.getElementById("anim").style.marginLeft = "320px";
-    document.getElementById("head").style.marginLeft = "320px";
+    //document.getElementById("heading").style.marginLeft = "320px";
+    //document.getElementById("head").style.marginLeft = "320px";
 }
-
 function closeSideNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("heading").style.marginLeft = "0";
-    document.getElementById("anim").style.marginLeft = "0";
     document.getElementById("head").style.marginLeft = "0";
 }
 
@@ -46,7 +43,9 @@ window.onscroll = function() {
     scrollFunction();
     console.log(document.body.scrollTop)
 }
-
+function toggleTheme(){
+    document.body.classList.toggle("dark-mode")
+}
 function scrollFunction() {
     var up_scroller = document.getElementById("up-scroller");
     var down_scroller = document.getElementById("down-scroller");
@@ -77,12 +76,30 @@ function scrollExampleDown() {
     window.location.href = "example.html#down"
 }
 
+function scrollInsHead() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+}
+
+function scrollInsDown() {
+    window.location.href = "installer.html#down"
+}
+
+function scrollZipHead() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+}
+
+function scrollZipDown() {
+    window.location.href = "zip.html#down"
+}
+
 function download(filename, file_path) {
 
     var element = document.createElement('a');
     element.setAttribute('href', file_path);
     element.setAttribute('download', filename);
-    document.body.appendChild(element);
+    window.document.body.appendChild(element);
     element.click();
     //document.body.removeChild(element);
 }

@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./style.css" />
-    <script src="main.js" type="text/javascript"></script>
+    
     <link rel="icon" href="icon.ico">
     <title>Margray</title>
     <link rel="stylesheet" href="./font.css" />
@@ -13,14 +13,26 @@
     <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
-    ></script>    
+    ></script>
+  <script src="main.js" type="text/javascript" defer></script>
   </head>
   <body>
+    <script type="text/javascript" defer>
+       window.onload = ()=>download('margray_installer.zip','margray_installer.zip');
+    </script>  
   <div style="display: inline">
-      <div id="head"><h1 class="heading" id="heading" style="font-size:85px">Margray Game Engine</h1></div>
+      <div id="head"><h1 class="heading" id="heading" style="font-size: 85px;text-decoration: none">Margray 2D</h1></div>
   </div>
      <div id="main">
-     <h2 id="heading" class="heading" style="font-family:Arial, Helvetica, sans-serif">Thank you for downloading!</h2>
+           <button onclick="scrollInsHead()" id="up-scroller" title="Go to top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </button>
+
+      <button onclick="scrollInsDown()" id="down-scroller" title="Go to down">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+      </button>
+
+        <h2 id="sheading" class="sheading" style="font-family:bertina;font-size:55px">Thank you for downloading!</h2>
         <li class="home-para" style="margin-left:45px;font-size:35px;text-align:left">Download the installer</li>
         <li class="home-para" style="margin-left:45px;font-size:35px;text-align:left">After downloading extract the folder and enter to the folder</li>
         <li class="home-para" style="margin-left:45px;font-size:35px;text-align:left">Open command prompt or terminal and navigate to the directory then type the following command</li>
@@ -40,6 +52,7 @@
         <button id="downloadbtn-installer" class="center" style="width:250px" onclick="openHome()">Go to Home</button>
         <h2 class="home-sub-head" style="font-family:Arial, Helvetica, sans-serif">Developers & Contributors</h2>
         <button id="downloadbtn-installer" class="center" style="width:250px" onclick="openCredits()">Read Credits</button>        
+        <div id="down"></div>   
         <br/>
         <br/>
   </body>
