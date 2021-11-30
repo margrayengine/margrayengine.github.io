@@ -24,8 +24,9 @@ function openExample() {
 }
 
 function openSideNav() {
-    document.getElementById("mySidenav").style.width = "320px";
-    document.getElementById("main").style.marginLeft = "320px";
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+
     //document.getElementById("heading").style.marginLeft = "320px";
     //document.getElementById("head").style.marginLeft = "320px";
 }
