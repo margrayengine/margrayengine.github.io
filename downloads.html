@@ -22,7 +22,7 @@
           <button onclick="nwt('example.html')">Examples</button>
           <button onclick="nwt('credits.html')">Credits</button>
         </div>
-        <p id="pages-button">Accesibility</p>
+        <p id="pages-button">Preference</p>
         <button onclick="toggleTheme()">Toggle Theme</button>
         <br/>
         <br/>
@@ -49,15 +49,19 @@
     <br/>
     <br/>
     <script type="text/javascript">
-      if (getTheme() == "dark") {
+      
+      if (getTheme() === "dark") {
         document.body.classList.add("dark-mode");
         giveWhite()
-      } else {
+      } 
+      
+      else {
+        giveBlack()
         if(document.body.classList.value.includes("dark-mode")) {
           document.body.classList.remove("dark-mode");
           
         }
-        giveBlack()
+        
       }
     </script>
   </body>

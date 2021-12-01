@@ -27,25 +27,25 @@
       </div>
       <p id="pages-button">Contents</p>
       <div id="contents">
-        <a href="#sprite">Sprite</a>
-        <a href="#ts">Transparent sprite</a>
-        <a href="#bg">Background image</a>
-        <a href="#btn">Button</a>
-        <a href="#imb">Image button</a>
-        <a href="#fps">Fps</a>
-        <a href="#is">Image sprite</a>
-        <a href="#as">Animated sprite</a>
-        <a href="#txt">Text</a>
-        <a href="#at">Animated text</a>
-        <a href="#img">Image</a>
-        <a href="#event">The Event Handler</a>
-        <a href="#time">The "Time" class</a>
-        <a href="#keys">The "Keys" class</a>
-        <a href="#oc">Other Constants</a>
+        <button onclick="nid('sprite')">Sprite</button>
+        <button onclick="nid('ts')">Transparent sprite</button>
+        <button onclick="nid('bg')">Background image</button>
+        <button onclick="nid('btn')">Button</button>
+        <button onclick="nid('imb')">Image button</button>
+        <button onclick="nid('fps')">Fps</button>
+        <button onclick="nid('is')">Image sprite</button>
+        <button onclick="nid('as')">Animated sprite</button>
+        <button onclick="nid('txt')">Text</button>
+        <button onclick="nid('at')">Animated text</button>
+        <button onclick="nid('img')">Image</button>
+        <button onclick="nid('event')">The Event Handler</button>
+        <button onclick="nid('time')">The "Time" class</button>
+        <button onclick="nid('keys')">The "Keys" class</button>
+        <button onclick="nid('oc')">Other Constants</button>
         <br/>
         <br/>
       </div>
-      <p id="pages-button">Accesibility</p>
+      <p id="pages-button">Preference</p>
       <button onclick="toggleTheme()">Toggle Theme</button>
       <br/>
       <br/>
@@ -59,7 +59,7 @@
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
       </button>
 
-      <button onclick="scrollDocsDown()" id="down-scroller" title="Go to down">
+      <button onclick="nid('down')" id="down-scroller" title="Go to down">
         <i class="fa fa-arrow-down" aria-hidden="true"></i>
       </button>
 
@@ -4567,27 +4567,31 @@
                               
       <li class="subli">
         <code class="subcode">NORMAL_FPS</code>
-        <p class="description">Can be used as fps in <a href="#fps" style="color:black">fps().setMaxFPS()</a></p>
+        <p class="description">Can be used as fps in <button onclick="nid('at')" class="mgp" style="outline:none;background:none;border:none">fps().setMaxFPS()</button></p>
       </li>        
       <li class="subli">
         <code class="subcode">LOADING_BASIC_TEXT_ANIMATION</code>
-        <p class="description">Can be used as the text list and the duration in <a href="#at" style="color:black">animated_text()</a> function</p>
+        <p class="description">Can be used as the text list and the duration in<button onclick="nid('at')" class="mgp" style="outline:none;background:none;border:none">animated_text()</button>function</p>
       </li>                                                         
       <div class="center">  
         <button id="downloadbtn-installer" onclick="openExample()">See Examples</button>
       </div>
       <div id="down"></div>
-      <script type="text/javascript">
-        if (getTheme() == "dark") {
-          document.body.classList.add("dark-mode");
-          giveWhite()
-        } else {
-          if(document.body.classList.value.includes("dark-mode")) {
-            document.body.classList.remove("dark-mode");
-            
-          }
-          giveBlack()
+    <script type="text/javascript">
+      
+      if (getTheme() === "dark") {
+        document.body.classList.add("dark-mode");
+        giveWhite()
+      } 
+      
+      else {
+        giveBlack()
+        if(document.body.classList.value.includes("dark-mode")) {
+          document.body.classList.remove("dark-mode");
+          
         }
-      </script>
+        
+      }
+    </script>
   </body>
 </html>

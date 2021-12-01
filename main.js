@@ -43,19 +43,20 @@ function hasTheme(){
         return false
     }
 }
+function nid(id){window.location.assign(`?theme=${localTheme()}#${id}`)} 
 function isTheme(theme){
     has = hasTheme()
     if(has){
         if(getTheme() === theme){
-            return true
+            return true;
         }
         else{
-            return false
-        }
+            return false;
+        };
     }
     else{
         return false;
-    }
+    };
 }
 function setParam(param,value){
     var searchParams = new URLSearchParams(window.location.search);
@@ -79,6 +80,7 @@ function nwt(url="",toId=null,s=null){
         else window.location.assign(url+`?theme=${s}`)
     }
 }
+
 function localTheme(){
     var theme
     if(document.body.classList.value.includes("dark-mode")){
@@ -188,11 +190,11 @@ function scrollExampleHead() {
 }
 
 function scrollDocsDown() {
-    window.location.href = "docs.html#down"
+    nid("down")
 }
 
 function scrollExampleDown() {
-    window.location.href = "example.html#down"
+    nid("down")
 }
 
 function scrollInsHead() {
@@ -201,7 +203,7 @@ function scrollInsHead() {
 }
 
 function scrollInsDown() {
-    window.location.href = "installer.html#down"
+    nid("down")
 }
 
 function scrollZipHead() {
@@ -210,7 +212,7 @@ function scrollZipHead() {
 }
 
 function scrollZipDown() {
-    window.location.href = "zip.html#down"
+    nid("down")
 }
 
 function download(filename, file_path) {

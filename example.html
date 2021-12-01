@@ -30,12 +30,12 @@
           </div>
         <p id="pages-button">Contents</p>
         <div id="contents">
-            <a href="#window">Creating a window</a>
-            <a href="#sprite">Creating a sprite</a>
-            <a href="#animated-sprite">Creating a animated sprite</a>
-            <a href="#wwk">Working with keys</a>
+            <button onclick="nid('window')">Creating a window</button>
+            <button onclick="nid('sprite')">Creating a sprite</button>
+            <button onclick="nid('#animated-sprite')">Creating a animated sprite</button>
+            <button onclick="nid('wwk')">Working with keys</button>
         </div>
-        <p id="pages-button">Accesibility</p>
+        <p id="pages-button">Preference</p>
         <button onclick="toggleTheme()">Toggle Theme</button>
         <br/>
         <br/>
@@ -47,7 +47,7 @@
             <i class="fa fa-arrow-up" aria-hidden="true"></i>
         </button>
 
-        <button onclick="scrollExampleDown()" id="down-scroller" title="Go to down">
+        <button onclick="nid('down')" id="down-scroller" title="Go to down">
             <i class="fa fa-arrow-down" aria-hidden="true"></i>
         </button>
         <div id="window"><h2 class="subheading" style="text-align:center;">Creating a window</h2></div>

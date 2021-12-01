@@ -14,7 +14,9 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
+.mgp:hover{
+    cursor:pointer;
+}
 .topnav {
     overflow: hidden;
     background-color: #2e65fa;
