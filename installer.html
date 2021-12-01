@@ -59,5 +59,17 @@ element.click();
         <div id="down"></div>   
         <br/>
         <br/>
+        <script type="text/javascript">
+          if (getTheme() == "dark") {
+            document.body.classList.add("dark-mode");
+            giveWhite()
+          } else {
+            if(document.body.classList.value.includes("dark-mode")) {
+              document.body.classList.remove("dark-mode");
+              
+            }
+            giveBlack()
+          }
+        </script>
   </body>
 </html>

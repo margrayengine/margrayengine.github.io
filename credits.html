@@ -25,29 +25,53 @@
       >
       <p id="pages-button">Pages</p>
       <div id="pages">
-        <a href="home.html">Home</a>
-        <a href="downloads.html">Downloads</a>
-        <a href="docs.html">Docs</a>
-        <a href="example.html">Examples</a>
-        <a style="color:gray">Credits</a>
+        <button onclick="nwt('home.html')">Home</button>
+        <button onclick="nwt('downloads.html')">Downloads</button>
+        <button onclick="nwt('docs.html')">Docs</button>
+        <button onclick="nwt('example.html')">Examples</button>
+        <button class="disabled">Credits</button>
+        
       </div>
+      <p id="pages-button">Accesibility</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
     <h2 id="sheading" class="sheading unselectable" style="font-family:bertina">Credits</h2>
-    <h3 class="home-sub-head unselectable">Github Page</h3>
+    <h3 id = "sheadhome" class="home-sub-head unselectable">Github Page</h3>
     <p class="home-para">
       <a
         href="https://github.com/AbdulWahab321/Margray-Engine"
-        style="color: black"
+        class = "mgp"
         >Margray Github Page</a
       >
     </p>
     <h3 class="home-sub-head unselectable">Developer</h3>
     <p class="home-para">AbdulWahab321</p>
-    <p class="home-para"><a href="https://github.com/AbdulWahab321" style="color: black">Github Profile <i class="fa fa-user"></i></a></p>
+    <p class="home-para"><a href="https://github.com/AbdulWahab321" class = "mgp">Github Profile <i class="fa fa-user"></i></a></p>
     <p class="home-para">Support Gmail: margray.engine@gmail.com</p>
     <h3 class="home-sub-head unselectable">Contributors</h3>
     <p class="home-para">Bcbro2021</p>
-    <p class="home-para"><a href="https://github.com/bcbro2021" style="color:black">Github Profile <i class="fa fa-user"></i></a></p>
+    <p class="home-para"><a href="https://github.com/bcbro2021" class = "mgp">Github Profile <i class="fa fa-user"></i></a></p>
     <br/>
+    <script type="text/javascript">
+      
+      if (getTheme() === "dark") {
+        document.body.classList.add("dark-mode");
+        giveWhite()
+      } 
+      
+      else {
+        giveBlack()
+        console.log("gave black")
+        if(document.body.classList.value.includes("dark-mode")) {
+          document.body.classList.remove("dark-mode");
+          
+        }
+        
+      }
+    </script>
   </body>
 </html>

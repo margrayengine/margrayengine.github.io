@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <link rel="stylesheet" href="./style.css"/>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="./index.css" />
-    <link rel="icon" href="icon.ico">
-        <script
+    <link rel="icon" href="icon.ico" />
+    <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
     ></script>
@@ -13,38 +13,104 @@
     <script src="main.js" type="text/javascript"></script>
   </head>
   <body>
-  <div style="display: inline;position: relative;">
-      <span style="font-size:30px;cursor:pointer;margin-left:10px;" onclick="openSideNav()">&#9776; Menu</span>
-      
-  
-   </div>   
-  </div>
+    <div
+      style="
+        display: inline-flex;
+        position: relative;
+      "
+    >
+      <span
+        style="font-size: 30px; cursor: pointer; margin-left: 10px"
+        onclick="openSideNav()"
+        >&#9776; Menu</span
+      >
+
+    </div>
+
     <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
-            >&times;</a>
-        <p id="pages-button">Pages</p>
-        <div id="pages">
-            <a style="color:gray">Home</a>
-            <a href="downloads.html">Downloads</a>
-            <a href="docs.html">Docs</a>
-            <a href="example.html">Examples</a>
-            <a href="credits.html">Credits</a>
-        </div>
-    </div>    
- 
-    <div id="main">
-      <div id="head"><h1 class="heading unselectable" id="heading" style="font-size: 85px;text-decoration: none">Margray 2D</h1></div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()"
+        >&times;</a
+      >
+      <p id="pages-button">Pages</p>
+      <div id="pages">
+        <button class="disabled">Home</button>
+        <button onclick="nwt('downloads.html')">Downloads</button>
+        <button onclick="nwt('docs.html')">Docs</button>
+        <button onclick="nwt('example.html')">Examples</button>
+        <button onclick="nwt('credits.html')">Credits</button>
+        
+      </div>
+      <p id="pages-button">Accesibility</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
       <br/>
-      <h3 class="home-sub-head unselectable">Download Margray</h3>
-      <button id="hm-dw-btn" class="unselectable" onclick="openDownloads()" style="width:250px">Go to Downloads</button>
-      <h3 class="home-sub-head unselectable">What are the functions?</h3>
-      <button id="hm-dw-btn" class="unselectable" onclick="openDocs()" style="width:250px">Read the Docs</button>
-      <h3 class="home-sub-head unselectable">How to use Margray?</h3>
-      <button id="hm-dw-btn" class="unselectable" id="button" onclick="openExample()" style="width:250px">Go to examples</button>
-      <h3 class="home-sub-head unselectable">Developers & Contributors</h3>
-      <button id="hm-dw-btn" class="unselectable" onclick="openCredits()" style="width:250px">Go to Credits</button>         
+      <br/>
       <br/>
       <br/>
     </div>
+
+    <div id="main">
+      <div id="head">
+        <h1
+          class="heading unselectable"
+          id="heading"
+          style="font-size: 85px; text-decoration: none"
+        >
+          Margray 2D
+        </h1>
+      </div>
+      <br />
+      <h3 class="home-sub-head unselectable">Download Margray</h3>
+      <button
+        id="hm-dw-btn"
+        class="unselectable"
+        onclick="nwt('downloads.html')"
+        style="width: 250px"
+      >
+        Go to Downloads
+      </button>
+      <h3 class="home-sub-head unselectable">What are the functions?</h3>
+      <button
+        id="hm-dw-btn"
+        class="unselectable"
+        onclick="nwt('docs.html')"
+        style="width: 250px"
+      >
+        Read the Docs
+      </button>
+      <h3 class="home-sub-head unselectable">How to use Margray?</h3>
+      <button
+        id="hm-dw-btn"
+        class="unselectable"
+        id="button"
+        onclick="nwt('example.html')"
+        style="width: 250px"
+      >
+        Go to examples
+      </button>
+      <h3 class="home-sub-head unselectable">Developers & Contributors</h3>
+      <button
+        id="hm-dw-btn"
+        class="unselectable"
+        onclick="nwt('credits.html')"
+        style="width: 250px"
+      >
+        Go to Credits
+      </button>
+      <br />
+      <br />
+    </div>
+    <script type="text/javascript">
+      if (getTheme() === "dark") {
+        document.body.classList.add("dark-mode");
+        giveWhite()
+      } else {
+        giveBlack()
+        if(document.body.classList.value.includes("dark-mode")) {
+          document.body.classList.remove("dark-mode");
+          
+        }
+        
+      }
+    </script>
   </body>
 </html>

@@ -19,11 +19,11 @@
       >
       <p id="pages-button">Pages</p>
       <div id="pages">
-        <a href="home.html">Home</a>
-        <a href="downloads.html">Downloads</a>
-        <a style="color: gray">Docs</a>
-        <a href="example.html">Examples</a>
-        <a href="credits.html">Credits</a>
+        <button onclick="nwt('home.html')">Home</button>
+        <button onclick="nwt('downloads.html')">Downloads</button>
+        <button class="disabled">Docs</button>
+        <button onclick="nwt('example.html')">Examples</button>
+        <button onclick="nwt('credits.html')">Credits</button>
       </div>
       <p id="pages-button">Contents</p>
       <div id="contents">
@@ -45,6 +45,12 @@
         <br/>
         <br/>
       </div>
+      <p id="pages-button">Accesibility</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
     <div id="main">
       <div id="head"><h1 class="heading unselectable" id="heading" style="font-size: 85px;text-decoration: none">Margray 2D</h1></div>
@@ -4571,6 +4577,17 @@
         <button id="downloadbtn-installer" onclick="openExample()">See Examples</button>
       </div>
       <div id="down"></div>
-
+      <script type="text/javascript">
+        if (getTheme() == "dark") {
+          document.body.classList.add("dark-mode");
+          giveWhite()
+        } else {
+          if(document.body.classList.value.includes("dark-mode")) {
+            document.body.classList.remove("dark-mode");
+            
+          }
+          giveBlack()
+        }
+      </script>
   </body>
 </html>

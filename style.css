@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(243, 243, 243) /*rgb(213, 255, 255)*/;
+    background-color: rgb(255, 255, 255) /*Grayish Shade: rgb(243, 243, 243)*/ /*Redish shade: rgb(213, 255, 255)*/;
     font-family: bertina;
     color: rgb(0, 0, 0);
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@ html {
     font-family:alphaEcho;
     text-align: center;
     font-size: 75px;
-    color: rgb(255, 59, 45);
+    color: rgb(255, 59, 45) /*ORIGINAL rgb(255, 59, 45)*/;
     text-decoration: underline;
 }
 .sheading {
@@ -247,6 +247,7 @@ li {
     overflow-x: hidden;
     transition: 0.8s;
     padding-top: 60px;
+    overflow-y:none
 }
 
 .sidenav a {
@@ -256,6 +257,19 @@ li {
     color: #818181;
     display: block;
     transition: 0.3s;
+}
+
+.sidenav button {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    background-color: #111;
+    outline: none;
+    border:none;
+    font-family: bertina;
 }
 
 .sidenav p {
@@ -332,6 +346,10 @@ li {
     color: #f1f1f1;
 }
 
+.sidenav button:hover:not(.disabled) {
+    color: #f1f1f1;
+    cursor:pointer;
+}
 .sidenav input:hover {
     color: #f1f1f1;
 }
@@ -431,5 +449,6 @@ li {
 }
 
 img{
-    width:50px;height:50px;
+    width:50px;
+    height:50px;
 }
